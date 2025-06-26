@@ -36,6 +36,16 @@ h2 {
     color: #3498db;
 }
 
+.info-text {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 6px;
+}
+
 .chart-container {
     position: relative;
     height: 250px;
@@ -48,11 +58,29 @@ h2 {
     font-weight: 500;
 }
 
-#controls {
+.control-group {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+}
+.control-group:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.setting-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 #controls button {
@@ -68,4 +96,17 @@ h2 {
 
 #controls button:hover {
     background-color: #2980b9;
+}
+
+#halfLifeNumberInput {
+    width: 80%; /* 부모 요소에 맞춰 너비 조정 */
+    max-width: 100px; /* 너무 커지지 않도록 최대 너비 설정 */
+    padding: 6px;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    /* 스피너(화살표) 숨기기 - 선택 사항 */
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
