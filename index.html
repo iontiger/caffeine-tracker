@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페인 트래커</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js 라이브러리 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Zoom 플러그인 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>카페인 체내 축적량</h1>
+        <div class="chart-container">
+            <canvas id="caffeineChart"></canvas>
+        </div>
+
+        <h2>현재 체내 카페인: <span id="currentCaffeineLevel">0.0</span> mg</h2>
+
+        <div id="controls">
+            <p>카페인 섭취하기:</p>
+            <button data-caffeine="100" data-name="커피">☕️ 커피 (100mg)</button>
+            <button data-caffeine="80" data-name="에너지 드링크">⚡️ 에너지 드링크 (80mg)</button>
+            <button data-caffeine="40" data-name="차">🍵 차 (40mg)</button>
+            <button data-caffeine="25" data-name="콜라">🥤 콜라 (25mg)</button>
+            <button data-caffeine="15" data-name="초콜렛">🍫 초콜렛 (15mg)</button>
+            <button id="resetZoomBtn">🔍 줌 리셋</button>
+            <button id="resetDataBtn">🗑️ 데이터 리셋</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
